@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portafolio académico y profesional de Gustavo Unocc Areche.">
+  <title>Mi Portafolio | Gustavo Unocc Areche</title>
+  <style>
+    :root{--bg:#07121f;--bg-2:#11233d;--panel:#122742;--panel-strong:#183a62;--accent:#4cc9ff;--accent-2:#8b5cf6;--text:#edf6ff;--muted:#bfd2ea;--success:#7ef0b2}
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:Arial,Helvetica,sans-serif;background:radial-gradient(circle at top left,#173a5c 0%,#091827 38%,#050d18 100%);color:var(--text);line-height:1.65}
+    header{position:sticky;top:0;z-index:10;background:rgba(7,18,31,.85);backdrop-filter:blur(14px);border-bottom:1px solid rgba(120,159,196,.2)}
+    nav{max-width:1100px;margin:auto;padding:16px 22px;display:flex;justify-content:space-between;align-items:center;gap:18px}
+    .brand{font-weight:800;color:var(--accent);letter-spacing:1px;text-transform:uppercase}
+    nav ul{display:flex;gap:20px;list-style:none;flex-wrap:wrap}
+    nav a{color:var(--text);text-decoration:none;font-size:.93rem;transition:.25s ease}
+    nav a:hover{color:var(--accent);transform:translateY(-1px)}
+    .hero{max-width:1100px;margin:auto;padding:95px 22px 85px;display:grid;grid-template-columns:1.4fr .8fr;gap:40px;align-items:center}
+    .eyebrow{color:var(--accent);font-weight:700;text-transform:uppercase;letter-spacing:2px;font-size:.82rem}
+    h1{font-size:clamp(2.5rem,6vw,4.7rem);line-height:1.08;margin:16px 0;text-shadow:0 10px 26px rgba(76,201,255,.18)}
+    h1 span{color:var(--accent)}
+    .hero p{color:var(--muted);max-width:650px;font-size:1.08rem}
+    .actions{display:flex;gap:13px;flex-wrap:wrap;margin-top:28px}
+    .btn{display:inline-block;padding:13px 20px;border-radius:12px;text-decoration:none;font-weight:700;transition:.25s ease}
+    .btn:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(76,201,255,.22)}
+    .primary{background:linear-gradient(135deg,var(--accent),#7dd3fc);color:#07111f;box-shadow:0 12px 28px rgba(76,201,255,.25)}
+    .secondary{border:1px solid rgba(152,170,194,.45);color:var(--text);background:rgba(255,255,255,.02)}
+    .profile{min-height:310px;border:1px solid rgba(120,159,196,.2);border-radius:28px;background:linear-gradient(145deg,rgba(25,51,78,.92),rgba(9,18,31,.96));display:grid;place-items:center;padding:28px;text-align:center;box-shadow:0 22px 45px rgba(5,13,24,.5), inset 0 1px 0 rgba(255,255,255,.08)}
+    .profile-inner{display:flex;flex-direction:column;align-items:center}
+    .avatar{width:170px;height:170px;border-radius:50%;overflow:hidden;border:4px solid rgba(76,201,255,.9);margin:0 auto 16px;box-shadow:0 0 0 7px rgba(76,201,255,.15),0 18px 35px rgba(76,201,255,.2)}
+    .avatar img{width:100%;height:100%;object-fit:cover;display:block}
+    .profile h2{font-size:1.7rem;margin-bottom:6px}
+    .profile p{color:var(--muted);font-size:1rem}
+    .status{display:inline-block;margin-top:12px;padding:6px 12px;border-radius:999px;background:rgba(126,240,178,.12);border:1px solid rgba(126,240,178,.45);color:var(--success);font-size:.82rem;font-weight:700}
+    section{padding:76px 22px}
+    .wrap{max-width:1100px;margin:auto}
+    .section-title{font-size:2rem;margin-bottom:12px}
+    .section-lead{color:var(--muted);max-width:720px;margin-bottom:30px}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{background:linear-gradient(180deg,rgba(18,39,66,.96),rgba(12,25,42,.96));border:1px solid rgba(120,159,196,.18);border-radius:18px;padding:24px;box-shadow:0 14px 30px rgba(4,10,18,.25)}
+    .card h3{color:var(--accent);margin-bottom:10px}
+    .card p,.card li{color:var(--muted)}
+    .card ul{padding-left:20px}
+    .alt{background:linear-gradient(180deg,rgba(10,20,31,.96),rgba(13,24,39,.96))}
+    .tag{display:inline-block;background:linear-gradient(135deg,rgba(76,201,255,.18),rgba(139,92,246,.18));color:#d9f4ff;border:1px solid rgba(139,92,246,.35);border-radius:30px;padding:7px 12px;margin:5px 5px 0 0;font-size:.88rem}
+    .contact{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+    .contact a{color:var(--accent);text-decoration:none}
+    footer{text-align:center;padding:25px;color:#91a3bc;border-top:1px solid rgba(120,159,196,.2);font-size:.9rem}
+    @media(max-width:760px){nav{align-items:flex-start;flex-direction:column}nav ul{gap:12px}.hero{grid-template-columns:1fr;padding-top:65px}.grid{grid-template-columns:1fr}.contact{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+<header>
+  <nav>
+    <div class="brand">MI PORTAFOLIO</div>
+    <ul>
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#sobre-mi">Sobre mí</a></li>
+      <li><a href="#carrera">Mi carrera</a></li>
+      <li><a href="#proyectos">Proyectos</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section class="hero" id="inicio">
+    <div>
+      <div class="eyebrow">Portafolio académico y profesional</div>
+      <h1>Hola, soy <span>Gustavo</span></h1>
+      <p>Estudiante de Arquitectura de Plataformas y Servicios de Tecnología de Información. Me interesa aprender, desarrollar soluciones tecnológicas y aplicar mis conocimientos en proyectos útiles.</p>
+      <div class="actions">
+        <a class="btn primary" href="#sobre-mi">Conóceme</a>
+        <a class="btn secondary" href="#proyectos">Ver mis proyectos</a>
+      </div>
+    </div>
+    <div class="profile">
+      <div class="profile-inner">
+        <div class="avatar">
+          <img src="WhatsApp%20Image%202026-10-11%20at%208.14.08%20PM%20(1).jpeg" alt="Foto de perfil de Gustavo Unocc Areche">
+        </div>
+        <h2>Gustavo Unocc Areche</h2>
+        <p>Estudiante de APSTI</p>
+        <span class="status">Disponible para proyectos</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt" id="sobre-mi">
+    <div class="wrap">
+      <h2 class="section-title">Sobre mí</h2>
+      <p class="section-lead">Soy estudiante del área de tecnología de información. Durante mi formación desarrollo trabajos académicos y proyectos relacionados con sistemas, programación, bases de datos y diseño web. Mi objetivo es seguir fortaleciendo mis conocimientos y utilizarlos para resolver necesidades reales.</p>
+      <div class="grid">
+        <article class="card"><h3>Formación</h3><p>Arquitectura de Plataformas y Servicios de Tecnología de Información (APSTI).</p></article>
+        <article class="card"><h3>Intereses</h3><p>Desarrollo de páginas web, programación, soporte tecnológico y creación de sistemas de información.</p></article>
+        <article class="card"><h3>Objetivo</h3><p>Crecer profesionalmente, aprender nuevas herramientas y construir soluciones claras, ordenadas y funcionales.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="carrera">
+    <div class="wrap">
+      <h2 class="section-title">Mi carrera profesional</h2>
+      <p class="section-lead">La carrera de APSTI está relacionada con el diseño, desarrollo, implementación y mantenimiento de plataformas y servicios tecnológicos.</p>
+      <div class="card">
+        <h3>Áreas de aprendizaje</h3>
+        <span class="tag">Programación</span><span class="tag">Desarrollo web</span>
+        <span class="tag">Bases de datos</span><span class="tag">Redes y servicios</span>
+        <span class="tag">Sistemas de información</span><span class="tag">Soporte técnico</span>
+        <p style="margin-top:18px">Estas áreas representan temas de formación e interés; puedes ajustar la lista según los cursos y herramientas que domines.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt" id="proyectos">
+    <div class="wrap">
+      <h2 class="section-title">Mis proyectos académicos</h2>
+      <p class="section-lead">Algunos trabajos y propuestas desarrollados durante mi formación.</p>
+      <div class="grid">
+        <article class="card"><h3>Sistema de matrícula</h3><p>Propuesta para registrar estudiantes, seleccionar cursos y organizar el proceso de matrícula.</p></article>
+        <article class="card"><h3>Asistente virtual académico con IA</h3><p>Proyecto orientado a brindar orientación e información académica mediante herramientas de inteligencia artificial.</p></article>
+        <article class="card"><h3>Desarrollo web</h3><p>Creación de páginas informativas y propuestas web para presentar contenidos y servicios de manera organizada.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto">
+    <div class="wrap">
+      <h2 class="section-title">Contacto</h2>
+      <p class="section-lead">Puedes completar estos datos para que las personas puedan comunicarse contigo.</p>
+      <div class="contact">
+        <div class="card"><h3>Información personal</h3><p><strong>Nombre:</strong> Gustavo Unocc Areche</p><p><strong>Carrera:</strong> APSTI</p><p><strong>Institución:</strong> IESTP Manuel Scorza Torre</p></div>
+        <div class="card"><h3>Mis datos de contacto</h3><p><strong>Correo:</strong> <a href="mailto:tu correo">Agregar correo electrónico</a></p><p><strong>Teléfono:</strong> Agregar número de contacto</p><p><strong>Ubicación:</strong> Agregar ciudad o localidad</p></div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer>© 2026 Gustavo Unocc Areche · Portafolio personal</footer>
+</body>
+</html>
